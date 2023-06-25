@@ -12,3 +12,9 @@ ln -sf "$HOME/dotfiles/nvim/init.vim" "$HOME/.config/nvim"  # Create soft link t
 ############################
 rm -rf "$HOME/.config/X11"
 ln -s "$HOME/dotfiles/X11" "$HOME/.config"  # Create a symlink targeting the whole directory X11 because everything in this directory should be shared between systems.
+
+#############
+# i3 config #
+#############
+rm -rf "$HOME/.config/i3"                   # delete the original config file
+ln -s "$HOME/dotfiles/i3" "$HOME/.config"   # create a symlink targeting the whole i3 directory config file
