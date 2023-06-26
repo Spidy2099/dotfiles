@@ -1,0 +1,4 @@
+○ firewalld.service - firewalld - dynamic firewall daemon
+     Loaded: loaded (]8;;file://ArchLinuxstudy/usr/lib/systemd/system/firewalld.service/usr/lib/systemd/system/firewalld.service]8;;; [0;1;38;5;185mdisabled[0m; preset: [0;1;38;5;185mdisabled[0m)
+     Active: inactive (dead)
+       Docs: ]8;;man:firewalld(1)man:firewalld(1)]8;;
