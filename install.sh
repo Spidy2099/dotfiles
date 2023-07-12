@@ -23,6 +23,9 @@ ln -s "$HOME/dotfiles/i3" "$HOME/.config"   # create a symlink targeting the who
 # zsh config #
 ##############
 mkdir -p "$HOME/.config/zsh"  # Create the zsh config file
-ln -sf "$HOME/dotfiles/zsh/.zshenv" "$HOME" # Create a symlink targeting .zshenv in $HOME path
-ln -sf "$HOME/dotfiles/zsh/.zshr" "$HOME/.config/zsh" # Create a symlink targeting .zshrc in $HOME/.config/zsh path
+ln -sf "$HOME/dotfiles/zsh/.zshenv" "$HOME" # Create a symlink targeting .zshenv to $HOME
+ln -sf "$HOME/dotfiles/zsh/.zshr" "$HOME/.config/zsh" # Create a symlink targeting .zshrc to .config
+ln -sf "$HOME/dotfiles/zsh/aliases" "$HOME/.config/zsh/aliases" # Target aliases setting file to .config
 
+rm -rf "$HOME/.cofig/zsh/external"  
+ln -sf "$HOME/dotfiles/zsh/external" "$HOME/.config/zsh"  # Target external dir to .config

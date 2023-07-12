@@ -1,0 +1,2 @@
+# This is a aliases setting file for zsh
+alias ll='ls -lah'

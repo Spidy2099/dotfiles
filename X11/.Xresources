@@ -30,7 +30,7 @@
 *.color15: #ffffff
 
 ! Font settings
-URxvt*font: xft:DejaVuSansMono:size=16:antialias=true
+URxvt*font: xft:DejaVuSansMono:size=25:antialias=true
 
 ! Letter space settings
 URxvt*letterSpace: -2
