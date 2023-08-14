@@ -1,2 +1,13 @@
 # This is a aliases setting file for zsh
-alias ll='ls -lah'
+# dz's aliases setting
+alias ls='ls --color=auto'
+alias ll='ls -l'
+alias grep='grep --color=auto'
+alias cp='cp -i'
+alias mv='mv -i'
+alias px='proxychains4 -q'     #use this alias so I don't have to type that long, also make it queit
+alias Sgpt='px ~/.local/bin/sgpt'   #don't know why that when I use sgpt with proxychains, it must use the full path to the python script
+
+# aliases for jumping in Zsh direcoty stack
+alias d='dirs -v'
+for index ({1..9}) alias "$index"="cd +${index}"; unset index

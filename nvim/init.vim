@@ -11,10 +11,12 @@ set undoreload=1000
 " Set line number
 set number
 
-" Set tabs indenting (set it to 2)
+" Set tabs indenting (set it to 4)
 set autoindent
 set expandtab
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
   
+" Set Command-Line mode history number
+set history=200

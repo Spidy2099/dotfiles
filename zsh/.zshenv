@@ -1,5 +1,5 @@
 # Set environment variables for Zsh
-# Path for config file
+# Path for config file(dotfile)
 export XDG_CONFIG_HOME="$HOME/.config"
 
 # Path for specific data
