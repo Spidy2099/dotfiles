@@ -64,16 +64,19 @@ if [ $(command -v "fzf") ]; then
     source /usr/share/fzf/completion.zsh
     source /usr/share/fzf/key-bindings.zsh
 fi
-#ask fzf to use ripgrep(alternative to grep) by default when we search for files.
+# ask fzf to use ripgrep(alternative to grep) by default when we search for files.
 export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git'"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-#Configure i3 to startup
+# Configure i3 to startup
 if [ "$(tty)" = "/dev/tty1" ]; then
     pgrep i3 || exec startx "$XDG_CONFIG_HOME/X11/.xinitrc"
 fi
 
-
+# CTRL + l used in tumux, so change the keystroke for clean the screen
+bindkey -r '^l' # unbind ctrl+l
+bindkey -r '^g' # unbind ctrl+g
+bindkey -s '^g' 'clear\n' # bind ctrl+g as clear screen
 
 
 #Zsh Syntax Highlighting(place it at the bottom of zshrc, so everything loaded before will be able to use syntax highlighting

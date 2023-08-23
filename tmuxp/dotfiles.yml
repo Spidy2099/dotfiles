@@ -1,0 +1,13 @@
+# Automate the creation of tmux sessions via YAML or JSON config file
+session_name: dotfiles
+start_directory: $HOME/dotfiles
+
+windows:
+  - window_name: terms
+    layout: tiled
+    panes:
+      - ls -lah
+  - window_name: nvim dotfiles
+    layout: tiled
+    panes:
+      - nvim +FZF

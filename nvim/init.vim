@@ -27,6 +27,7 @@ nnoremap <space> <nop>
 let mapleader = "\<space>"
 nnoremap <leader>bn :bn<cr> " buffer next 
 nnoremap <leader>r :source $MYVIMRC<cr> " set <leader> + r to reload the init.vim file
+nnoremap <leader>q :q<cr> " quit nvim quikly
 
 " Use vim-plug to manage plug:ns "
 call plug#begin("$XDG_CONFIG_HOME/nvim/plugged") " Set the plugin install path
@@ -36,6 +37,7 @@ Plug 'simeji/winresizer' " manage the windows
 Plug 'junegunn/fzf.vim', { 'do':{ -> fzf#install() } }
 Plug 'junegunn/fzf.vim' " fuzzy search in buffer list, command history, and so on
 Plug 'simnalamburt/vim-mundo' " manipulate the undo tree
+Plug 'christoomey/vim-tmux-navigator' " work with tmux pane navigation
 call plug#end()
 
 " Config for csv.vim
@@ -43,5 +45,5 @@ autocmd BufRead,BufWritePost *.csv :%ArrangeColumn! "Format CSV more reable when
 autocmd BufWritePre *.csv :%UnArrangeColumn  "Don't save the fomatting when write the file
 
 " Config for winresizer
-let g:winresizer_start_key = "<leader>w" " User <ctrl> + w to use plugin to manage window
+let g:winresizer_start_key = "<leader>w" " Use <leader> + w to use plugin to manage window
 
