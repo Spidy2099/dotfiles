@@ -6,7 +6,7 @@ alias grep='grep --color=auto'
 alias cp='cp -i'
 alias mv='mv -i'
 alias px='proxychains4 -q'     #use this alias so I don't have to type that long, also make it queit
-alias Sgpt='px ~/.local/bin/sgpt'   #don't know why that when I use sgpt with proxychains, it must use the full path to the python script
+alias Sgpt='px ~/micromamba/envs/Daily/bin/sgpt'   #don't know why that when I use sgpt with proxychains, it must use the full path to the python script
 
 # aliases for jumping in Zsh direcoty stack
 alias d='dirs -v'

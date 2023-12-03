@@ -6,6 +6,7 @@
 mkdir -p "$XDG_CONFIG_HOME/nvim"       # Create nvim config dir to avoid error
 mkdir -p "$XDG_CONFIG_HOME/nvim/undo"  # Create nvim config dir to avoid erro
 ln -sf "$DOTFILES/nvim/init.vim" "$XDG_CONFIG_HOME/nvim"  # Create soft link to config file 
+ln -sf "$DOTFILES/nvim/coc-settings.json" "$XDG_CONFIG_HOME/nvim/coc-settings.json"  # Create soft link to config the coc.vim's LSP
 
 ###############################
 # Nvim Plugin Manager Install #

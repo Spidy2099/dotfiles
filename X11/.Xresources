@@ -30,7 +30,7 @@
 *.color15: #ffffff
 
 ! Font settings
-URxvt*font: xft:DejaVuSansMono:size=25:antialias=true 
+URxvt*font: xft:DejaVuSansMono:size=15:antialias=true 
 ! xft=wqy-microhei:size=25
 
 ! Letter space settings
@@ -61,3 +61,7 @@ URxvt*tabbedex.tab-fg: 110
 URxvt*tabbedex.tab-bg: 236
 URxvt*tabbedex.transparent: true
 URxvt*tabbedex.new-button: false    ! Hide the ugly button
+
+! set these to false so I can use ctrl+alt+c/v to copy and paste using xsel
+URxvt.iso14755: false
+URxvt.iso14755_52: false

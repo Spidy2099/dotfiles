@@ -1,0 +1,31 @@
+{
+    "languageserver": {
+        "bash":{
+            "command": "bash-language-server",
+            "args": ["start"],
+            "filetypes": ["sh"],
+            "ignoredRootPaths": ["~"]
+        },
+        "clangd":{
+            "command": "clangd",
+            "rootPatterns": [
+                            "compile_flags.txt",
+                            "compile_commands.json"
+            ],
+            "filetypes": [
+                            "c",
+                            "cc",
+                            "cpp",
+                            "c++",
+                            "objc",
+                            "objcpp"]
+        }
+    },
+    "diagnostic.enable": false,
+
+    "coc.preferences.extensionUpdateCheck": "daily",
+    "suggest.noselect": true,
+    "suggest.enablePreselect": false,
+    "snippets.ultisnips.pythonPrompt": false
+}
+

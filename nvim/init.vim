@@ -78,8 +78,10 @@ let g:winresizer_start_key = "<leader>w" " Use <leader> + w to use plugin to man
 """""""""""
 let g:coc_global_extensions = [
             \'coc-marketplace',
-            \'coc-json',
+            \'coc-json',          
+            \'coc-pyright',       
             \'coc-snippets',
+            \'coc-vimlsp',
             \]
 " Use tab for trigger completion with characters ahead and navigate
 " NOTE: There's always complete item selected by default, you may want to enable
@@ -90,12 +92,16 @@ inoremap <silent><expr> <TAB>
       \ coc#pum#visible() ? coc#pum#next(1) :
       \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
-inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>
+" Use <S-Tab> to navigate backwards
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
 " Make <CR> to accept selected completion item or notify coc.nvim to format
 " <C-g>u breaks current undo, please make your own choice
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+            \: "\<C-g>u\<CR>\<C-r>=coc#on_enter()\<CR>"
+
+" let coc format my code on <CR>
+inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 function! CheckBackspace() abort
   let col = col('.') - 1
@@ -137,3 +143,16 @@ nmap <leader>rn <Plug>(coc-rename)
 " Formatting selected code
 xmap <leader>f <Plug>(coc-format-selected)
 nmap <leader>f <Plug>(coc-format-selected)
+
+" set the maxium number to show in the popup menu
+set pumheight=10
+
+
+""""""""""""""
+" coc.vimlsp "
+""""""""""""""
+" Document highlight
+let g:markdown_fenced_languages = [
+            \ 'vim',
+            \ 'help'
+            \]

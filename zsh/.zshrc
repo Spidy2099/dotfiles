@@ -79,5 +79,22 @@ bindkey -r '^g' # unbind ctrl+g
 bindkey -s '^g' 'clear\n' # bind ctrl+g as clear screen
 
 
+# >>> mamba initialize >>>
+# !! Contents within this block are managed by 'mamba init' !!
+export MAMBA_EXE='/usr/bin/micromamba';
+export MAMBA_ROOT_PREFIX='/home/dz/micromamba';
+__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__mamba_setup"
+else
+    alias micromamba="$MAMBA_EXE"  # Fallback on help from mamba activate
+fi
+unset __mamba_setup
+# <<< mamba initialize <<<
+
+# Add path to $PATH so I can use python scripts in this path
+export PATH="~/.local/bin:$PATH"
+
+
 #Zsh Syntax Highlighting(place it at the bottom of zshrc, so everything loaded before will be able to use syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh   # source the plugin 'zsh-syntax-highlighting'
